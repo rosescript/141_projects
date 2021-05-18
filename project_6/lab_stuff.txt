@@ -1,0 +1,141 @@
+//
+
+// Author: Sydney Wells, UIC, Spring 2021
+
+// Assignment: Lab 14
+
+// Description: An intro to the ClassReg class and project 6.
+
+//
+
+
+#include <iostream>
+
+#include <string>
+
+#include <fstream>
+
+#include "classreg.h"
+
+
+using namespace std;
+
+
+int main() {
+
+    // making the class object and declaring name and cap vars
+
+    ClassReg classreg;
+
+    string name;
+
+    int capacity;
+
+    
+
+    
+
+    // getting class name and capacity
+
+    cout << "Enter class name>" << endl;
+
+    cin >> name;
+
+    classreg.setName(name);
+
+    cout << "Enter class capacity>" << endl;
+
+    cin >> capacity;
+
+    classreg.setCapacity(capacity);
+
+    
+
+    
+
+    // taking student names
+
+    string netid;
+
+    cout << "Enter a student name to enroll (# to stop)>" << endl;
+
+    cin >> netid;
+
+    while (netid != "#") {
+
+        // checks if class is at capacity
+
+        // if so, student is waitlisted,
+
+        // else, student is enrolled
+
+        if (classreg.numEnrolled() == capacity) {
+
+            classreg.waitlistStudent(netid, 1);
+
+            cout << "Student '" << netid << "' added to waitlist" << endl;
+
+            
+
+        } else {
+
+            classreg.enrollStudent(netid);
+
+            cout << "Student '" << netid << "' was enrolled" << endl;
+
+        }
+
+        cout << "Enter a student name to enroll (# to stop)>" << endl;
+
+        cin >> netid;
+
+    } // end of while loop
+
+    
+
+    
+
+    // printing the enrolled students
+
+    cout << classreg.getName() << endl << "capacity: " << classreg.getCapacity() << endl;
+
+    cout << "enrolled: ";
+
+    for (int i = 0; i < classreg.numEnrolled(); i++) {
+
+        cout << classreg.retrieveEnrolledStudent(i) << " ";
+
+    }
+
+    
+
+    
+
+    // printing the waitlisted students
+
+    cout << endl << "waitlisted: ";
+
+    // declaring vars to pass as params for retrieveWaitlistedStudent
+
+    string id;
+
+    int priority = 0;
+
+    if (classreg.numWaitlisted() > 0) {
+
+        for (int i = 0; i < classreg.numWaitlisted(); i++) {
+
+            classreg.retrieveWaitlistedStudent(i, id, priority);
+
+            cout << id << " ";
+
+        }
+
+    }
+
+    
+
+    return 0;
+
+
+}

@@ -1,0 +1,23 @@
+enroll cs211 xlin48
+l cs211
+enroll cs211 xlin48
+l cs211
+i cs211 1
+e cs211 xlin48
+l cs211
+enroll cs211 amalla5
+enroll cs212 amalla5
+l cs211
+enroll cs211 amalla5
+l cs211
+increase cs211 4
+enroll cs211 amalla5
+enroll cs211 hbrahm3
+enroll cs211 jmanus2
+enroll cs211 jkarim5
+e cs211 amacat4
+enroll cs211 amalla5
+enroll cs211 jkarim5
+e cs211 xlin48
+list cs211
+q

@@ -1,0 +1,30 @@
+stats
+output example.txt
+help
+list cs141
+h
+increase cs141 1
+list cs251
+l math210
+w cs111 popcorn 1
+enroll cs251 buh
+e cs251 waiting
+e cs251 aaaa
+w eaes101 carrot 34
+waitlist cs251 swells20 42
+enroll cs251 buh1
+w cs251 sw02 202
+enroll cs251 buh2
+p hi.txt
+enroll cs251 buh3
+l cs251
+waitlist cs251 swells20 42
+l cs251
+i cs251 10000
+e cs251 swells20 42
+w cs251 buh 2
+waitlist cs251 swells20 42
+l cs251
+output example.txt
+e span202 apple
+q
